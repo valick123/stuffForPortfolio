@@ -1,0 +1,9 @@
+.header{
+    border-bottom: $border-size solid rgba(193, 192, 247, .8);
+    background-color:rgba(193, 192, 247, .25);
+   &__inner{
+       
+       padding: $padding;
+       
+    }
+}

@@ -1,0 +1,10 @@
+.footer{
+    background-color:rgba($primary-color, .25);       
+    border-top: $border-size solid rgba($primary-color, .8);
+
+    &__inner{
+        padding: $padding;        
+        
+        
+    }
+}
