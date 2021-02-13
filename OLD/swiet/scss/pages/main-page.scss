@@ -1,0 +1,261 @@
+.main{
+    &__inner{
+        padding: 39px 0 100px 0;
+        display: flex;
+        flex-direction: column;
+        & .card{
+            &__inner{
+                flex-direction: column;
+            }
+        }
+        & .clothes{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            & .dress{
+                background: url('../img/cards/dress.png') no-repeat center;
+            }
+            & .boots{
+                background: url('../img/cards/boots.png') no-repeat center;
+            }
+            & .swimsuit{
+                background: url('../img/cards/swimsuit.png') no-repeat center;
+            }
+            & .svitshot{
+                display: flex;
+                justify-content: flex-end;
+                background: url('../img/cards/svitshot.png') no-repeat center;
+            }
+            & .bags{
+                background: url('../img/cards/bags.png') no-repeat center;
+            }
+            & .pigamas{
+                background: url('../img/cards/pigamas.png') no-repeat center;
+            }
+            & .coat{
+                background: url('../img/cards/coat.png') no-repeat center;
+            }
+        }
+        & .brands{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            border-top: 1px solid $border-color;
+            border-bottom: 1px solid $border-color;
+            padding: 70px 10px;
+            width: 100%;
+            & .item{
+                flex-basis: 122px;
+                height: 64px;
+                &-1{
+                    background: url('../img/brands-sprite.png') no-repeat 18px 0;
+                }
+                &-2{
+                    background: url('../img/brands-sprite.png') no-repeat -106px 0;
+                }
+                &-3{
+                    background: url('../img/brands-sprite.png') no-repeat -231px 0;
+                }
+                &-4{
+                    background: url('../img/brands-sprite.png') no-repeat -355px 0;
+                }
+                &-5{
+                    background: url('../img/brands-sprite.png') no-repeat -480px 0;
+                }
+                &-6{
+                    background: url('../img/brands-sprite.png') no-repeat -606px 0;
+                }
+                &-7{
+                    background: url('../img/brands-sprite.png') no-repeat -732px 0;
+                }
+                &-8{
+                    background: url('../img/brands-sprite.png') no-repeat -856px 0;
+                }
+                &-9{
+                    background: url('../img/brands-sprite.png') no-repeat -982px 0;
+                }
+                &-10{
+                    background: url('../img/brands-sprite.png') no-repeat -1106px 0;
+                }
+            }
+        }
+        & .popular,
+        .last,
+        .trands{
+            display: flex;
+            flex-wrap: wrap;
+            padding-bottom: 60px;
+        }
+        & .popular{
+            
+            & .card__title{
+                font-size: 15px;
+                line-height: 18px;
+                letter-spacing: 0.025em;
+                font-family: 'Myriad Pro',sans-serif;
+                width: 148px;
+            }
+            & .price{
+               position: absolute;
+                bottom: 36px;
+            }
+            & .add{
+                position: absolute;
+                bottom: 36px;
+            }
+        }
+        & .last{
+            & .card{
+                &__body{
+                    height: 320px;
+                }
+                & .card__title{
+                position: absolute;
+                font-size: 15px;
+                line-height: 18px;
+                letter-spacing: 0.025em;
+                bottom: 36px;
+                width: 148px;
+                font-family: "Panton SemiBold",sans-serif;
+            }
+            }
+        }
+        & .trands{
+            & .card{
+                &__body{
+                    height: 321px;
+                    
+                }
+                & .trand-1{
+                    background: url('../img/cards/Layer%2085.png') no-repeat center;
+                }
+                & .trand-2{
+                    background: url('../img/cards/Layer%2086.png') no-repeat center;
+                }
+                & .trand-3{
+                    background: url('../img/cards/Layer%2087.png') no-repeat center;
+                }
+            }
+            & .card-medium{
+                & .add{
+                    width: 200px;
+                    align-self: flex-start;
+                }
+            }
+        }
+        & .feedback{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 0 10px;
+            & form{
+                flex-grow: 1;
+                display: flex;
+                justify-content: flex-end;
+                flex-wrap: wrap;
+                & input{
+                    width: 426px;
+                    margin-right: 20px;                    
+            }
+                & button{
+                    margin-right:20px;
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                }
+                @include tabletAndMobile{
+                    justify-content: center;
+                    & input{
+                        width: 100%;
+                        margin-right: 0;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+        & .content-part{
+            & .mark{
+                display: block;
+                text-decoration: none;
+                margin-bottom: 20px;
+                font-size: 15px;
+                letter-spacing: 0.05em;
+                color: $primary-color;
+                font-family: 'Myriad Pro',sans-serif;
+            }
+            & p{
+                margin-bottom: 29px;
+                font-size: 15px;
+                line-height: 24px;
+                letter-spacing: 0.025em;
+                color: $primary-text-color;
+            }
+            & .price{
+               display: block; 
+                font-family: "Myriad Pro",sans-serif;
+                font-size: 15px;
+                letter-spacing: 0.05em;
+                color: $secondary-text-color;
+            }
+            & .new{
+                &::before{
+                    content: 'новинка';
+                    position: absolute;
+                    width: 54px;
+                    height: 15px;
+                    background-color: $secondary-text-color;
+                    top: 10px;
+                    left: 10px;
+                    border-radius: 5px;
+                    font-size: 9px;
+                    letter-spacing: 0.05em;
+                    text-align: center;
+                    text-transform: uppercase;
+                    color: #fff;
+                    font-family: "Panton SemiBold",sans-serif;
+                }
+                
+            }
+            & .sale{
+                    &::before{
+                    content: 'акция';
+                    position: absolute;
+                    width: 40px;
+                    height: 15px;
+                    background-color: #ff9c00;
+                    top: 10px;
+                    left: 10px;
+                    border-radius: 5px;
+                    font-size: 9px;
+                    letter-spacing: 0.05em;
+                    text-align: center;
+                    text-transform: uppercase;
+                    color: #fff;
+                    font-family: "Panton SemiBold",sans-serif;
+                    }
+                }
+            
+        }
+        & .hover-effect{
+            height: 100%;
+            width: 100%;
+            background-color: #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            &:hover{
+                    opacity: 1;
+            }
+            & .img-full{
+                
+            }
+            }
+    }
+}
+

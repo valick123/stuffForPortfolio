@@ -1,0 +1,22 @@
+.block-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 100%;
+    padding: 40px 10px 30px 10px;
+    & .content-title{
+        font-family: "Panton",sans-serif;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 0.025em;
+        margin: 0;
+    }
+    & a{
+        text-decoration: none;
+        font-family: "Panton Bold",sans-serif;
+        font-size: 11px;
+        line-height: 12px;
+        letter-spacing: 0.2em;  
+        color: $primary-color;
+    }
+}

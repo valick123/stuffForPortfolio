@@ -1,0 +1,68 @@
+.card{
+    margin-bottom: 20px;
+    &__inner{
+
+    }
+    &__header{
+        display: flex;
+        align-items: center;
+        & .img-full{			
+            min-width: 100%;
+            max-width:100%;
+		}
+        & .img-defult{
+            height: 100%;
+        }
+		}
+    &__title{
+            font-family: "Bebas", sans-serif; 
+            font-size: 16px;
+            line-height: 18px;
+            color:$primary-color;
+            text-transform: uppercase;
+        &-s{
+            font-family: "Bebas", sans-serif; 
+            font-size: 16px;
+            line-height: 18px;
+            color:$secondary-text-color;
+            text-transform: uppercase;
+        }
+        }
+    &__date{
+           font-family:"Bebas", sans-serif ; 
+            font-size: 11px;
+            line-height: 18px;
+            color:$secondary-text-color;
+        &-s{
+             font-family:"Bebas", sans-serif ; 
+            font-size: 11px;
+            line-height: 18px;
+            color:$primary-color;
+        }
+        }
+    &__body{
+        padding: 15px;
+        border: 1px solid $secondary-text-color;
+        border-top:none;
+        
+    }
+    &__footer{
+        
+    }
+    @include desctop{
+       
+            
+        
+        &:nth-last-child(-n+4){
+            margin-bottom: 0;
+        }
+    }
+    @include tablet{
+        
+           
+        
+        &:nth-last-child(-n+3){
+            margin-bottom: 0;
+        }
+    }
+}

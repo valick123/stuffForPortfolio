@@ -1,0 +1,16 @@
+.block__seporator{
+    background: url('../img/works/Line.png') no-repeat center;  
+    background-clip: content-box;
+ background-size: 100% 55%;
+    & .block__title{
+         text-transform: uppercase;
+        font-family: "Bebas",sans-serif;
+        color: $primary-color;
+        margin: 0;
+        background-color: #fff;
+        display: inline-block;
+        padding-right: 16px;
+        text-align: left;
+        font-size: 14px;
+    }
+}

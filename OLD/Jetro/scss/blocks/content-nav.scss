@@ -1,0 +1,27 @@
+.content-nav{
+		margin-bottom: 35px;
+		& .menu{
+			list-style: none;
+			padding: 0;
+			display: flex;
+			& a{
+				padding: 5px 14px;
+				text-transform: uppercase;
+				color:$secondary-text-color;
+				font-weight: bold;
+				text-decoration: none;
+				&:hover{
+					background-color:$primary-color;
+					color:#fff;
+				}
+			}
+		}
+    @include mobile{
+        & .menu{
+            justify-content: center;
+            & a{
+                padding: 5px;
+            }  
+        }
+    }
+	}

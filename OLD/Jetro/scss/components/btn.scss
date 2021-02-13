@@ -1,0 +1,22 @@
+.btn{    
+    display: inline-block;
+    border: none;
+    width: 56px;
+    height: 31px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color:#fff;
+    font-family: "Bebas Regular", sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    @include mobile{
+        margin: 0 auto;
+    }
+    }
+.btn-primary{
+    background-color:$primary-color;
+    &:hover{
+    background-color: lighten($primary-color,5);
+    }
+}
+

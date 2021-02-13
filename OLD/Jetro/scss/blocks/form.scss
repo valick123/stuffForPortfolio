@@ -1,0 +1,27 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    &__field{
+        width: 220px;
+        margin-bottom: 10px; 
+        border: 1px solid $primary-color;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $primary-color;
+        padding: 11px 13px;
+        &::placeholder{
+            color:$primary-color;
+        }
+    }
+    &__text{
+        resize:none;
+        width: 100%;
+    }
+    @include mobile{
+        & .form__field{
+            min-width: 100%;
+        }
+    }
+}

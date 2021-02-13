@@ -1,0 +1,164 @@
+.card{
+    margin-bottom: 20px;
+    padding: 0 10px;
+    &__inner{
+    min-height: 100%;
+        background-color: #fff;
+    }
+    &__header{
+        display: flex;
+        align-items: center;
+        & .img-full{			
+            min-width: 100%;
+            max-width:100%;
+		}
+        & .img-defult{
+            height: 100%;
+        }
+		}
+    &__title{
+        margin-bottom: 20px;
+        font-family: 'Panton SemiBold',sans-serif;
+    }
+    &__date{}
+    &__body{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        background-color: #fff;
+        border-top:none; 
+        height: 421px;
+        padding: 39px;
+        & .content-part{
+            display: flex;
+            flex-direction: column;
+        }
+        
+    }
+    &__footer{
+        
+    }
+    @include mobile{
+       
+    }
+    @include semidesctop{
+        
+    }
+}
+.card-big{
+    width: 60%;
+    & .card__body{
+        & .card__title{
+            font-size: 30px;
+            line-height: 1.2;
+            letter-spacing: 0.025em;
+        }
+        
+    }
+    & .content-part{
+            width: 310px;
+        }
+    @include tabletAndMobile{
+        width: 100%;
+    }
+    @include mobile{        
+        & .content-part{
+            width: 100%;
+        }
+         & .card__body{
+            padding: 20px;
+        }
+    }
+    @include semidesctop{
+        & .card__body{
+            padding: 10px;
+        }
+    }
+}
+.card-medium{
+    width: 40%;
+    & .card__body{
+        
+        & .content-part{
+            width: 234px;
+        }
+    }
+   
+    @include tablet{
+        width: 33%;
+        & .card__body{
+            padding: 20px;
+        }
+    }
+    @include mobile{
+        width: 100%;
+         & .card__body{
+            padding: 20px;
+        }
+    }
+    @include semidesctop{
+        & .card__body{
+            padding: 10px;
+        }
+    }
+}
+.card-small{
+    width: 20%;
+    & .card__body{
+        padding: 36px;
+        & .content-part{
+            width: 100%;
+        }
+    }
+    & .card__title{
+            font-size: 24px;
+            line-height: 1.25;
+            letter-spacing: 0.025em;
+        }
+    @include tablet{
+        width: 33%;
+    }
+    @include mobile{
+        width: 100%;
+        & .card__body{
+            padding: 20px;
+        }
+    }
+    @include semidesctop{
+        & .card__body{
+            padding: 10px;
+        }
+    }
+}
+.card-joind{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    & .card__body{
+        height: 200px;
+        & .content-part{
+            width: 160px;
+        }
+    }
+     & .card__title{
+            font-size: 24px;
+            line-height: 1.25;
+            letter-spacing: 0.025em;
+        }
+     
+    @include tablet{
+        
+    }
+    @include mobile{
+         & .card__body{
+            padding: 20px;
+        }
+    }
+    @include semidesctop{
+        & .card__body{
+            padding: 10px;
+        }
+    }
+}

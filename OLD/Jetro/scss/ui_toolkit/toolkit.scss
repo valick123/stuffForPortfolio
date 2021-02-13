@@ -1,0 +1,284 @@
+.ui{
+    margin-bottom: 20px;
+    padding: 10px;
+    & .ui_list{
+        display: flex;
+        list-style: none;
+        padding: 0;
+    }
+}
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+body {
+    
+}
+
+input,
+button {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+.form-row {
+    margin-bottom: 20px;
+}
+
+.form-row:last-child {
+    margin-bottom: 0;
+}
+
+.form-row--btn {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.form-container {
+    display: flex;
+    margin: 0 -5px;
+}
+
+.form-col {
+    flex: 1;
+    padding: 0 5px;
+}
+
+.form-field {
+    position: relative;
+    font-size: 0;
+}
+
+.form-label {
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+.form-input {
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 0 10px;
+    width: 100%;
+    font-size: 14px;
+}
+
+.form-input:focus {
+    border-color: skyblue;
+}
+
+.form-input::-webkit-input-placeholder {
+  color: #ccc;
+}
+.form-input::-moz-placeholder {
+  color: #ccc;
+}
+.form-input:-ms-input-placeholder {
+  color: #ccc;
+}
+.form-input:-moz-placeholder {
+  color: #ccc;
+}
+
+.form-input:disabled {
+    opacity: 0.5;
+}
+
+.form-area {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 10px;
+    width: 100%;
+    min-height: 100px;
+    resize: none;
+    font-size: 14px;
+}
+
+.form-area:focus {
+    border-color: skyblue;
+}
+
+.form-area::-webkit-input-placeholder {
+  color: #ccc;
+}
+.form-area::-moz-placeholder {
+  color: #ccc;
+}
+.form-area:-ms-input-placeholder {
+  color: #ccc;
+}
+.form-area:-moz-placeholder {
+  color: #ccc;
+}
+
+.form-message {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 2px;
+    font-size: 12px;
+    color: red;
+}
+
+.form-error {
+    border-color: red;
+}
+
+
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    text-align: center;
+    min-width: 100px;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.btn-primary {
+    background-color: skyblue;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: dodgerblue;
+    color: #fff;
+}
+
+.btn-secondary {
+    border: 1px solid skyblue;
+    color: skyblue;
+}
+
+.btn-secondary:hover {
+    background-color: skyblue;
+    color: #fff;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+}
+
+.btn:disabled:hover {
+    background-color: skyblue;
+}
+
+.file-upload input {
+    display: none;
+}
+
+.checkbox input {
+    display: none;
+}
+
+.checkbox label {
+    position: relative;
+    padding-left: 22px;
+    line-height: 16px;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+.checkbox label:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border:  1px solid #ccc;
+    z-index: 1;
+}
+
+.checkbox label:after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    background-color: skyblue;
+    opacity: 0;
+}
+
+.checkbox input:checked + label:before {
+    border-color: skyblue;
+}
+
+.checkbox input:checked + label:after {
+    opacity: 1;
+}
+
+.radio input {
+    display: none;
+}
+
+.radio label {
+    position: relative;
+    padding-left: 22px;
+    line-height: 16px;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+.radio label:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border:  1px solid #ccc;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+.radio label:after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    background-color: skyblue;
+    opacity: 0;
+    border-radius: 50%;
+}
+
+.radio input:checked + label:before {
+    border-color: skyblue;
+}
+
+.radio input:checked + label:after {
+    opacity: 1;
+}
+
+
+.radio input:disabled + label:before {
+    opacity: 0.5;
+}
+
+.radio input:disabled + label:after {
+    
+}
+
+.radio input:disabled:checked + label:before {
+    opacity: 0.5;
+    border-color: skyblue;
+}
+
+.radio input:disabled:checked + label:after {
+    opacity: 0.5;
+}

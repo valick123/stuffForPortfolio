@@ -1,0 +1,121 @@
+.footer{
+    border-top: 1px solid $secondary-text-color;
+    &__top{
+        padding: 60px 0;
+        & .top__inner{
+            display: flex;
+             & .card{
+                width: 20%;
+                margin: 0;
+                 &__inner{
+                     background-color: transparent;
+                 }
+            &__header{
+                padding: 0;
+            }
+            &__body{
+                padding: 0;
+                border: none;
+                height: 100%;
+                background-color: transparent;
+                & .info-list{
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    & a{
+                        font-family: "Panton",sans-serif;
+                        text-decoration: none;
+                        font-size: 13px;
+                        letter-spacing: 0.05em;
+                    }
+                }
+                & .paiments{
+                    display: flex;
+                    flex-wrap: wrap;
+//                    justify-content: space-around;
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    & li{
+                        margin-right: 5px;
+                        margin-bottom: 5px;
+                        
+                        & a{
+                            display: block;
+                            width: 50px;
+                            height: 50px;
+                        }
+                        & .qivi{
+                            background: url('../img/paiments-sprite.png') no-repeat 0 0;
+                            width: 100px;
+                            height: 50px;
+                        }
+                        & .yandmon{
+                            background: url('../img/paiments-sprite.png') no-repeat -110px 0;
+                            width: 95px;
+                            height: 50px;
+                        }
+                        & .mcvisa{
+                            background: url('../img/paiments-sprite.png') no-repeat 0 -60px;
+                        }
+                        & .sber{
+                            background: url('../img/paiments-sprite.png') no-repeat -60px -60px;
+                        }
+                        & .alphab{
+                            background: url('../img/paiments-sprite.png') no-repeat -120px -60px;
+                        }
+                        & .webm{
+                            background: url('../img/paiments-sprite.png') no-repeat -180px -60px;
+                        }
+                    }
+                }
+            }
+            &__title{
+               font-size: 15px;
+               line-height: 18px;
+               letter-spacing: 0.025em; 
+               font-family: "Panton SemiBold",sans-serif;
+                 }     
+        }
+        }
+    }
+    &__bottom{
+        border-top: 1px solid #ebebeb;
+        padding: 20px 0;
+        & .bottom__inner{
+            display: flex;
+            justify-content: space-between;
+            & .left_part{
+                display: flex;
+                justify-content: space-between;
+                & .copyright{
+                    margin-right: 75px;
+                }
+            }
+            & .right_part{
+                
+            }
+        }
+    }
+    @include tabletAndMobile{
+        
+           
+    }
+        @include mobile{
+            & .footer__top{
+                & .top__inner{
+                flex-direction: column;
+                & .card{
+                    width: 100%;
+                    margin-bottom: 20px;
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                    
+                    
+                }
+            }
+            }
+            
+        }
+}

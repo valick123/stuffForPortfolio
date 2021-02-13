@@ -1,0 +1,55 @@
+.alert{
+       
+    &__text{
+        font-size: 14px;
+        line-height: 20px;        
+        margin: 0;
+        text-align: center;
+    }
+    &__item{
+        border:1px solid;
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 28px 15px;
+    }
+    &__sucsess{
+        background-color:$sucsess-color;
+        border-color:darken($sucsess-color,40);
+        color:darken($sucsess-color,40);
+        &:hover{
+            background-color:darken($sucsess-color,10);
+            border-color:darken($sucsess-color,55);
+            color:darken($sucsess-color,55);             
+        }
+    }
+    &__error{
+        background-color:$error-color;
+        border-color:darken($error-color,40);
+        color:darken($error-color,40);
+        &:hover{
+           background-color:darken($error-color,10);
+           border-color:darken($error-color,55);
+           color:darken($error-color,55); 
+        }
+    }
+    &__note{
+        background-color:$note-color;
+        border-color:darken($note-color,40);
+        color:darken($note-color,40);
+        &:hover{
+           background-color:darken($note-color,10);
+           border-color:darken($note-color,55);
+           color:darken($note-color,55); 
+        }
+    }
+    &__notification{
+        background-color:$notification-color;
+        border-color:darken($notification-color,40);
+        color:darken($notification-color,40);
+        &:hover{
+          background-color:darken($notification-color,10);
+          border-color:darken($notification-color,55);
+          color:darken($notification-color,55);  
+        }
+    }
+}

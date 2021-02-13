@@ -1,0 +1,41 @@
+.cookies{
+    
+}
+.contacts{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    & .contact-header{
+        flex-basis: 100%;
+        padding: 30px 0;
+        & .contact-title{
+            font-size: 48px;
+            line-height: 48px;
+            letter-spacing: 0.025em;
+            font-family: "Panton",sans-serif;
+        }
+    }
+    & .telephones{
+        & .tels{
+            padding: 0;
+            list-style: none;
+            color:$primary-text-color;
+            & a{
+                color: $primary-text-color;
+                text-decoration: none;
+            }
+        }
+    }
+    & .office{
+        & .offices{
+            padding: 0;
+            list-style: none;
+        }
+    }
+}
+@include desctop{
+    .contacts{
+        width: 730px;
+    }
+}

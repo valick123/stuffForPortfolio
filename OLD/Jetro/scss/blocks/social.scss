@@ -1,0 +1,27 @@
+.social{
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    & a{
+        display: block;
+        width: 30px;
+        height: 30px;
+        margin-right: 5px;
+    }
+    & .fb{
+        background: url('../img/social.png') no-repeat 0 0;
+    }
+    & .tw{
+        background: url('../img/social.png') no-repeat -35px 0;
+    }
+    & .mail{
+        background: url('../img/social.png') no-repeat -70px 0;
+    }
+    & .rss{
+        background: url('../img/social.png') no-repeat -105px 0;
+    }
+    & .vine{
+        background: url('../img/social.png') no-repeat -140px 0;
+    }
+}

@@ -1,0 +1,32 @@
+.cookies{
+    & .site-map{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        padding: 0;
+        list-style: none;
+        & li{
+            margin-right: 26px;
+            position: relative;
+            &::after{
+                content: '';
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                top: 0;
+                right: -23px;
+                background: url('../img/cookie-arrow.png') no-repeat center;
+            }
+            &:last-child{
+                margin-right: 0;
+            }
+            & a{
+                text-decoration: none;
+                color: $primary-color;
+                font-family: "Panton SemiBold",sans-serif;
+                font-size: 13px;
+                letter-spacing: 0.05em;    
+            }
+        }
+    }
+}

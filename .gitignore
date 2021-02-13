@@ -1,2 +1,6 @@
 node_modules
 dist/
+REACT_Catalog/dist/
+REACT_Catalog/node_modules/
+*/dist/
+*/node_modules/

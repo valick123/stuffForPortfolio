@@ -1,0 +1,63 @@
+.features{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 60px 10px;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    & .item{
+        width: 335px;
+        position: relative;
+        padding-left: 125px;
+        flex-grow: 1;
+        min-height: 80px;
+        & .feature-title{
+            margin: 0;
+            font-size: 17px;
+            line-height: 36px;
+            letter-spacing: 0.1em;
+            color: $primary-color;
+            font-family: "Myriad Pro",sans-serif;
+        }
+        p{
+            font-size: 15px;
+            line-height: 24px;
+            letter-spacing: 0.025em;
+            font-family: "Myriad Pro",sans-serif;
+            margin: 0;
+        }
+        &-1{
+            &::before{
+                content: "";
+                position: absolute;
+                width: 95px;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: url('../img/feature-1.png') no-repeat center;
+            }
+        }
+        &-2{
+            &::before{
+                content: "";
+                position: absolute;
+                width: 95px;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: url('../img/feature-2.png') no-repeat center;
+            }
+        }
+        &-3{
+            &::before{
+                content: "";
+                position: absolute;
+                width: 95px;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: url('../img/feature-3.png') no-repeat center;
+            }
+        }
+    }
+}

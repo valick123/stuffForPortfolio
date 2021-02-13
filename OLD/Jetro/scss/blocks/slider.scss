@@ -1,0 +1,79 @@
+.slider{
+	color:#fff;
+	margin-bottom: 40px;
+    
+    
+	&__inner{
+	}
+	&__view{
+    position: relative;
+        .slick {
+            &-arrow {
+                position: absolute;
+                top: 50%;
+                border: 0;
+                background-color: transparent;
+                font-size: 0;
+                padding: 0;
+                width: 36px;
+                height: 52px;
+                background-image: url('../img/slider/next.png');
+                z-index: 1;
+                margin-top: -26px;
+                
+               
+            }
+
+            &-prev {
+                left: 25px;
+                transform: rotate(180deg);
+            }
+
+            &-next {
+                right: 25px;
+            }
+            @include mobile{
+                &-arrow{
+                    display: none !important;
+                } 
+                }
+        }
+	}
+	&__item{
+		position: relative;
+		
+		& img{
+			max-width: 100%;
+			min-width: 100%;
+		}
+	}
+	&__desc{
+		position: absolute;
+		bottom: 30px;
+		left: 30px;
+		width: 400px;
+		padding: 20px;
+		background-color: rgba(232, 102, 60, 0.8);
+		& h3{
+			text-transform: uppercase;
+			font-family: "Bebas Regular", sans-serif;
+			font-size: 18px;
+			}
+		& p{
+			padding: 0;
+			font-size: 12px;
+		}	
+        @include mobile{
+            max-width:100%;
+            max-height: 100%;
+            min-height: 100%;
+            min-width: 100%;
+            left: 0;
+            bottom: 0;
+            & p{
+                font-size: 11px;
+                margin: 0;
+            }
+            }
+		}
+}
