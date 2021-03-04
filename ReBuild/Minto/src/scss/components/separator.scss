@@ -1,0 +1,21 @@
+.separator {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.separator-text {
+    white-space: nowrap;
+    margin: 0 7px 0 0;
+    font-weight: 700
+}
+
+.separator-bg {
+    background-image: url('../img/separator.png');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100% 5px;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1
+}

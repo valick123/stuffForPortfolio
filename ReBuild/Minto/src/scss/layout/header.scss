@@ -1,0 +1,21 @@
+.header {
+    border-top: 8px solid $primary-color;
+    padding: 30px 0;
+    &__inner{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+        align-items: baseline;
+        & .logo{
+            color: $primary-color;
+            font-size: 39px;
+            font-family: Times, sans-serif;
+            white-space: nowrap;
+        }
+    }
+}
