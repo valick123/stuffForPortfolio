@@ -9,5 +9,6 @@ import BuisnessWeek from '../img/partners/buisnessWeek.png';
 import SeparatorBG from "../img/separator.png";
 import CardImgLayer from "../img/img-layer.png";
 import CardImg from "../img/info-card-img.png";
+import Favico from "../img/favicon-32x32.png"
 
-export {Logo, SliderBG, fbIco,twIco,AboutCom,Mashble,TechCrunch,BuisnessWeek,SeparatorBG,CardImgLayer, CardImg}
+export {Logo, SliderBG, fbIco,twIco,AboutCom,Mashble,TechCrunch,BuisnessWeek,SeparatorBG,CardImgLayer, CardImg,Favico}
