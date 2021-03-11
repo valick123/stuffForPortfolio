@@ -1,0 +1,10 @@
+.bottomMenu{
+    &-item{
+        &_ico{
+            margin-right: 5px;
+        }
+        &_link{
+            color:darken($primary-color,10%);
+        }
+    }
+}

@@ -10,7 +10,7 @@ class CategoryPage extends React.Component{
         }
     }
     componentDidMount(){
-        fetch(`http://localhost:3000/products?productType=${this.props.match.params.category}`)
+        fetch(`${this.props.dbAddress}/products`)
         .then(response=>response.json())
         .then(data=>{
             this.props.dispatch({
@@ -48,7 +48,7 @@ class CategoryPage extends React.Component{
                         <h1>{this.props.match.params.category}</h1>
                         {
                             !this.state.isLoading
-                            ?this.props.catalog.map((item)=>{
+                            ?this.props.catalog[this.props.match.params.category].map((item)=>{
                                 return <ProductCard info={item} key={item.id} />
                             })
                             :<Spinner type="grow" color="primary" />
@@ -63,7 +63,8 @@ class CategoryPage extends React.Component{
 const mapStateToProps = (store) =>{
     return{
         catalog:store.catalogPage.catalogList,
-        ...store.bascetPage
+        ...store.bascetPage,
+        ...store.main
     }
 }
 

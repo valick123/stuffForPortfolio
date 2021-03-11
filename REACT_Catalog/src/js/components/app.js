@@ -13,7 +13,7 @@ import CategoryPage from './pages/catalogPage/categoryPage';
 import ProductPage from './pages/catalogPage/productPage';
 import PrivateRoute from './privateRoute';
 
-
+const repoName = "/repo-name/";
 
 export default class App extends React.Component{
     constructor(props){
@@ -24,10 +24,10 @@ export default class App extends React.Component{
         localStorage.setItem('isLoged', false)        
     }
     render(){
-        
+       console.log(process.env.NODE_ENV) 
         
         return ( 
-        <Router>
+        <Router basename={process.env.NODE_ENV==="development"?null:repoName}>
             <Header />
             <main className='main'>
                 <Switch>

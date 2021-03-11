@@ -19,7 +19,7 @@ export const bascetReducer =(state = initialState, action)=>{
         case "GET_DEFAULT_ITEMS":{
             return{
                 ...state,
-                bascetList:[...state.bascetList,...action.payload]
+                bascetList:[...state.bascetList,...action.payload.filter(item=>item.id<=3?true:false)]
             }
         }
         default: {

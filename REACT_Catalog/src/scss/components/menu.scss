@@ -1,0 +1,87 @@
+.menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    margin: 0;
+    list-style: none;
+    &-toggler{
+        display: none;
+    }
+    &-header{
+        display: none;
+    }
+    &-block{
+        flex-grow: 1;
+    }
+    &-item{
+        flex-grow: 1;
+        &_ico{
+            margin-right: 5px;
+        }
+        &_link{
+            font-size: 15px;
+            color:darken($primary-color,10%);
+            display: block;
+            padding: $padding;
+            text-align: center;
+            text-transform: uppercase;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+    }
+}
+@include tablet{
+    .menu{
+        width: 100vw;
+        &-block{
+            flex-grow: 1;
+        }
+    }
+}
+@include mobile{
+    .menu{
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        justify-content: center;
+        &-item{
+            width: 100vw;
+            flex-grow: 0;
+            flex-basis: 15%;
+            &_link{
+                font-size: 20px;
+                padding: $padding*2;
+                &:hover{
+                    background-color:darken($primary-color, 5%) ;
+                }
+            }
+        }
+        &-block{
+            position: fixed;
+            height: 100vh;
+            background-color: lighten($primary-color,5%);
+            top: 0;
+            right: -100%;
+            transition: all 0.5s;
+            z-index: 1;
+            width: 100vw;
+            &-opened{
+                right: 0;
+            }
+        }
+        &-toggler{
+            display: block;
+            border:none;
+            background-color: transparent;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        &-header{
+            display: block;
+            padding: $padding;
+            border-bottom: 1px solid darken($primary-color, 5%);
+        }
+    }
+}

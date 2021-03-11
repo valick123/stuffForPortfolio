@@ -1,19 +1,30 @@
 const initialState = {
-    catalogList:[],
+    catalogList:{},
     currentProduct:{}
 }
 export const catalogReducer = (state = initialState,action)=>{
     switch (action.type){
         case "GET_PRODUCT_LIST":{
+            let categiryList= [];
+            action.payload.forEach(item => {
+                if(!categiryList.includes(item.productType)){
+                    categiryList.push(item.productType);
+                }
+            });
+            let newCatalogList = {};
+            categiryList.forEach(category=>{
+                newCatalogList[category] = action.payload.filter(item=>category===item.productType?true:false)
+            }) 
             return{
                 ...state,
-                catalogList:[ ...action.payload]
+                catalogList:newCatalogList
             }
         }
         case "GET_CURRENT_PRODUCT":{
+            let currentProduct = action.payload.data.filter(item=>item.title === action.payload.currentProduct?true:false)[0];
             return{
                 ...state,
-                currentProduct:action.payload[0]
+                currentProduct:currentProduct
             }
         }
         default:{

@@ -1,0 +1,11 @@
+.socials{
+    &-item{
+        &_link{
+            color:darken($primary-color,10%);
+
+        }
+        &_ico{
+            margin-right: 5px;
+        }
+    }
+}

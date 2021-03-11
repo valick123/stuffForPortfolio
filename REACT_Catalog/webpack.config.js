@@ -66,24 +66,34 @@ module.exports= {
         port:4001,
         hot: isDev,
         historyApiFallback: true,
-        inline: true
+        disableHostCheck:true,
+        host:"192.168.100.4"
     },
     plugins:[
         new HTMLWebpackPlugin({
             template:'./src/index.html',
             minify:{
                 collapseWhitespace:isProd
-            }
+            },
+            base:isDev?"/":"./"
         }),
         new CleanWebpackPlugin(),
-        // new CopyWbpackPlugin({
-        //     patterns:[
-        //         {
-        //             from:path.resolve(__dirname, './src/img/favicon.ico'),
-        //             to:path.resolve(__dirname, 'dist')
-        //         }
-        //     ]
-        // }),
+        new CopyWbpackPlugin({
+            patterns:[
+                // {
+                //     from:path.resolve(__dirname, './src/img/favicon.ico'),
+                //     to:path.resolve(__dirname, 'dist')
+                // },
+                {
+                    from:path.resolve(__dirname,'./src/404.html'),
+                    to:path.resolve(__dirname, 'dist')
+                },
+                {
+                    from:path.resolve(__dirname,'./dataBase'),
+                    to:path.resolve(__dirname,'dist')
+                }
+            ]
+        }),
         new MiniCssExtractPlugin({
             filename:fileName('css','css/')
         })

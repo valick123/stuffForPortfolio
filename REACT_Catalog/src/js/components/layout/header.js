@@ -2,12 +2,18 @@ import React from 'react';
 import {Row, Col, Container,Button,Nav, NavItem, NavLink } from 'reactstrap'
 import {Link,} from 'react-router-dom'
 import {connect} from 'react-redux'
-import {Redirect} from "react-router-dom"
-import LOGO from '../../../img/placeholder.com-logo.png'
+import LOGO from '../../../img/placeholder.com-logo.png';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import {fas} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+ library.add(fas)
+
 
 class Header extends React.Component{
     constructor(props){
-        super(props)
+        super(props);
+        this.Menu = React.createRef()
     }
     logOut = () =>{
         localStorage.setItem("isLoged", false);
@@ -17,61 +23,88 @@ class Header extends React.Component{
         })
        
     }
+    handleOpenMenu= () =>{
+        console.log(this.Menu)
+        this.Menu.current.classList.add('menu-block-opened');
+        document.body.style.overflow = "hidden"
+    }
+    handleCloseMenu= () =>{
+        console.log(this.Menu)
+        this.Menu.current.classList.remove('menu-block-opened');
+        document.body.style.overflow = "visible"
+    }
     render(){
        
         return(
             <header className="header" >
                 <Container >
                     <div className="header__inner">
-                       <Row>
-                        <Col md={2}>
+                        <div className="logo">
                             <img src={LOGO} style={{
                                 width :"100%",
                                 maxWidth: 300
                             }} />
-                        </Col>
-                        <Col md={10}>
-                            <Nav>
-                                <NavItem>
-                                    <Link className="nav-link" to="/" >
+                        </div>
+                        
+                        <button onClick={this.handleOpenMenu} className="menu-toggler" >
+                            <FontAwesomeIcon icon="bars"/>
+                        </button>
+                            <div className="menu-block" ref={this.Menu}>
+                                <div className="menu-header">
+                                    
+                                    <button onClick={this.handleCloseMenu} className="menu-toggler">
+                                        <FontAwesomeIcon icon="arrow-right" />
+                                    </button>
+                                </div>
+                                
+                            <ul className="menu" >
+                                
+                                <li className="menu-item" onClick={this.handleCloseMenu}> 
+                                    <Link className="menu-item_link" to="/" >
+                                        <FontAwesomeIcon className="menu-item_ico" icon="home" fixedWidth />
                                         Home    
                                     </Link>
                                     
-                                </NavItem>    
-                                <NavItem>
-                                    <Link className="nav-link" to="/catalog" >
+                                </li>    
+                                <li className="menu-item" onClick={this.handleCloseMenu}>
+                                    <Link className="menu-item_link" to="/catalog" >
+                                        <FontAwesomeIcon className="menu-item_ico" icon="th" fixedWidth />
                                         Catalog 
                                     </Link>
                                     
-                                </NavItem>    
-                                <NavItem>
-                                    <Link className="nav-link" to='/bascet'>
+                                </li>    
+                                <li className="menu-item" onClick={this.handleCloseMenu}>
+                                    <Link className="menu-item_link" to='/bascet'>
+                                        <FontAwesomeIcon className="menu-item_ico" icon="shopping-cart" fixedWidth />
                                         Bascet  
                                      </Link>
                                     
-                                </NavItem>    
-                                <NavItem>
+                                </li>    
+                                <li className="menu-item" onClick={this.handleCloseMenu}>
                                     {this.props.isLoged
-                                ?<li>
-                                    <Button color="link" onClick={this.logOut}>LogOut</Button>
-                                </li>
-                                :<li>
-                                    <Link className="nav-link" to="/logIn">
+                                ?
+                                    <button className="menu-item_link" color="link" onClick={this.logOut}>
+                                        <FontAwesomeIcon className="menu-item_ico" icon="sign-out-alt" fixedWidth />
+                                        LogOut
+                                    </button>
+                                
+                                :
+                                    <Link className="menu-item_link" to="/logIn">
+                                        <FontAwesomeIcon className="menu-item_ico" icon="sign-in-alt" fixedWidth />
                                         LogIn
                                     </Link>
-                                </li>}
+                                }
                                     
-                                </NavItem>                               
-                            </Nav>
+                                </li>                               
+                            </ul>
+                            </div>
+                            
                         
                             
                             
-                            {/* {!this.props.isLoged
-                                ?<Redirect to='/' />
-                                :null} */}
-                        </Col>
-                    </Row> 
-                    </div>
+                           
+                        </div>
+                    
                     
                 </Container>
             </header>

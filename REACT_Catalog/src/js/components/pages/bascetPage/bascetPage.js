@@ -9,7 +9,7 @@ import BascetProductCard from './bascetProductCard';
     }
     componentDidMount(){
         if(this.props.bascetList.length == 0){
-             fetch(`http://localhost:3000/products?id_gte=1&id_lte=3`)
+             fetch(`${this.props.dbAddress}/products`)
             .then(responce => responce.json())
             .then(data=>{
                 this.props.dispatch({
@@ -45,7 +45,8 @@ import BascetProductCard from './bascetProductCard';
 }
 const mapStateToProps =(store)=>{
     return{
-        ...store.bascetPage
+        ...store.bascetPage,
+        ...store.main
     }
 }
 

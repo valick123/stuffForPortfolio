@@ -2,8 +2,18 @@
     border-bottom: $border-size solid rgba(193, 192, 247, .8);
     background-color:rgba(193, 192, 247, .25);
    &__inner{
-       
+       display: flex;
+       justify-content: space-between;
+       align-items: baseline;
        padding: $padding;
        
+    }
+}
+@include tablet{
+    .header{
+        &__inner{
+            align-items: center;
+            flex-direction: column;
+        }
     }
 }

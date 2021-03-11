@@ -11,13 +11,16 @@ class ProductPage extends React.Component{
         }
     }
     componentDidMount(){
-        fetch(`http://localhost:3000/products?title=${this.props.match.params.product}`)
+        fetch(`${this.props.dbAddress}/products`)
         .then(response=>response.json())
         .then(data=>{
             
                 this.props.dispatch({
                     type:"GET_CURRENT_PRODUCT",
-                    payload:data
+                    payload:{
+                        data:data,
+                        currentProduct:this.props.match.params.product
+                    }
                 }) 
                 this.setState({
                     isLoading:false
@@ -63,7 +66,6 @@ class ProductPage extends React.Component{
             autoplay:true,
             autoplaySpeed:2000
           };
-          console.log(this.props.productInfo)
         return(
             <Container>
                 <Row>
@@ -89,17 +91,16 @@ class ProductPage extends React.Component{
                                     <CardText>{this.props.productInfo.full_text}</CardText>
                                     <CardTitle tag="h3" >Photo galerry</CardTitle>
                                     <Slider {...settings}>
-                                        {console.log(this.props.productInfo.gallery)}
                                         {this.props.productInfo.gallery?this.props.productInfo.gallery.map((item,index)=>{
                                             if(item!=""){
-                                                return <div>
+                                                return <div key={index}>
                                                 <img 
                                                 src={item} 
                                                 style={{
                                                     height: 200 ,
                                                     wigth:"auto"
                                                 }} 
-                                                key={index} />
+                                                 />
                                             </div>
                                             }
                                         }):null}
@@ -126,7 +127,8 @@ class ProductPage extends React.Component{
 const mapStateToProps = (store) =>{
     return{
         productInfo:store.catalogPage.currentProduct,
-        ...store.bascetPage
+        ...store.bascetPage,
+        ...store.main
     }
 }
 export default connect(mapStateToProps)(ProductPage)
