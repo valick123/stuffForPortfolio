@@ -33,8 +33,7 @@ import BascetProductCard from './bascetProductCard';
                     <Col md={12} onClick={this.deletefromBascet}>
                         {this.props.bascetList.length
                         ?this.props.bascetList.map((item,index)=>{
-                            console.log(index)
-                            return <BascetProductCard info = {item} ket={index} />
+                            return <BascetProductCard info = {item} key={index} />
                         })
                         :<p>Bascet is empty</p>}
                     </Col>

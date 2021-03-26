@@ -1,3 +1,23 @@
-.logo{
+.logo-block{
     flex-grow: 1;
+    transition: all $transition;
+    max-width: 100%;
+    
+    &:active{
+        background-color: rgba(#fff,$opacity-30);
+    }
+}
+.logo-font{
+    font-size: 185%;
+}
+@include tablet{
+    .logo-font{
+        font-size:250% ;
+
+    }
+}
+@include mobile{
+    .logo-font{
+        font-size: 125%;
+    }
 }

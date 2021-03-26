@@ -1,5 +1,5 @@
 const initialState = {
-    dbAddress:"http://192.168.100.4:3000",
+    dbAddress:"http://192.168.141.43:3000",
 }
 
 export const mainReducer = (state= initialState, action) =>{

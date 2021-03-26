@@ -1,0 +1,32 @@
+.catalog-card{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding-left:$padding;
+    color:$primary-color;
+    justify-content: center;
+    box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+    border-radius: $border-radius-4;
+    border:1px solid rgba($secondary-border-color,$opacity-20);
+    transition:all $transition;
+    &:hover{
+        background-color: rgba($primary-color,$opacity-05);
+    }
+    &-link{
+        text-transform: uppercase;
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: $padding*2;
+
+    }
+    &-ico{
+        // margin-right: $margin;
+    }
+}
+.news-card,
+.post-card{
+    box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+
+}

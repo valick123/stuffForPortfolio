@@ -25,15 +25,15 @@ class CategoryPage extends React.Component{
     }
     addToBascet=(e)=>{
         if(e.target.tagName == 'BUTTON'){
-            console.log(e.target.tagName)
             let product = null;
-        this.props.catalog.forEach((item)=>{
-            if(item.id ==  +e.target.dataset.productId){
-                product = item;
-                
-            }
-        })    
-         console.log(product);  
+          
+        for(let key in this.props.catalog){
+            this.props.catalog[key].forEach(item=>{
+                if(item.id === +e.target.dataset.productId){
+                    product = item;
+                }
+            })
+        }
         this.props.dispatch({
             type:"ADD_TO_BASCET",
             payload:product

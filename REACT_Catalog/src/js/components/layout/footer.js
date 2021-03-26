@@ -12,7 +12,6 @@ export default class Footer extends React.Component{
         super(props)
     }
     render(){
-        console.log(window.screen.height,window.screen.width)
         return(
             <footer className="footer" >
                 <Container>

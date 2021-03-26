@@ -1,10 +1,11 @@
 .header{
-    border-bottom: $border-size solid rgba(193, 192, 247, .8);
-    background-color:rgba(193, 192, 247, .25);
+    border-bottom: $border-size solid rgba($primary-color,$opacity-80);
+    background-color:$primary-color;  
+    color:#fff; 
    &__inner{
        display: flex;
        justify-content: space-between;
-       align-items: baseline;
+       align-items: center;
        padding: $padding;
        
     }

@@ -1,27 +1,27 @@
 import React from 'react';
 import { Card, CardHeader, CardBody, CardFooter, Button,CardTitle,CardText,CardLink } from 'reactstrap';
-import {Link} from "react-router-dom"
-
-export default class NewsCard extends React.Component{
+import {Link} from 'react-router-dom'
+export default class PostCard extends React.Component{
     constructor(props){
         super(props)
     }
     render(){
         return(
-            <Card>
+            <Card className="mb-2 post-card">
                 <CardBody>
-                    <CardTitle tag="h5">{`#${this.props.info.id} ${this.props.info.title}`}</CardTitle >
-               
+                    <CardTitle tag="h5">{`#${this.props.info.id} ${this.props.info.name}`}</CardTitle >
                 
+                    <img src = {this.props.img.thumbnailUrl}/>
                     <CardText>
                     {this.props.info.body}
                     </CardText>
                     <CardLink href={`mailto:${this.props.info.email}`}>{this.props.info.email}</CardLink>
-                
-                    <Link to={`/news/${this.props.info.id}`}>
-                        <Button color="primary" >Read more</Button>
+                </CardBody>
+                <CardBody>
+                <Link to={`/posts/${this.props.info.id}`}>
+                        <Button   color="primary" >Read more</Button>
                     </Link>
-                    </CardBody>
+                </CardBody>
             </Card>
         )
     }

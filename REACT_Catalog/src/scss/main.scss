@@ -1,5 +1,6 @@
 
 @import"~normalize.css";
+@import 'bootstrap/scss/bootstrap.scss';
 @import "config/fonts";
 @import "config/responsive";
 @import "config/variables";
@@ -9,4 +10,8 @@
 @import "./components/menu.scss";
 @import "./components/logo.scss";
 @import "./components/socials.scss";
-@import "./components/bottomMenu.scss"
+@import "./components/bottomMenu.scss";
+@import "./components/slider.scss";
+@import "./components/btn.scss";
+@import "./components/cards.scss";
+@import "./components/loader.scss";

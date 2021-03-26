@@ -354,6 +354,98 @@
             "price":1000,
             "full_text":"description",
             "status":"sale/top/new"
+        },
+        {
+            "id":17,
+            "productType":"watches",
+            "title":"test_17",
+            "specifications":{
+                "size":"",
+                "material":"",
+                "processor":"",
+                "RAM-memory":"",
+                "RAM-memorySize":"",
+                "OS":"",
+                "hardware-memory":"",
+                "hardware-memorySize":""
+            },
+            "src":"some photo links",
+            "gallery":["",
+                        "",
+                        "", 
+                        ""],
+            "price":1000,
+            "full_text":"description",
+            "status":"sale/top/new"
+        },
+        {
+            "id":18,
+            "productType":"watches",
+            "title":"test_18",
+            "specifications":{
+                "size":"",
+                "material":"",
+                "processor":"",
+                "RAM-memory":"",
+                "RAM-memorySize":"",
+                "OS":"",
+                "hardware-memory":"",
+                "hardware-memorySize":""
+            },
+            "src":"some photo links",
+            "gallery":["",
+                        "",
+                        "", 
+                        ""],
+            "price":1000,
+            "full_text":"description",
+            "status":"sale/top/new"
+        },
+        {
+            "id":19,
+            "productType":"watches",
+            "title":"test_19",
+            "specifications":{
+                "size":"",
+                "material":"",
+                "processor":"",
+                "RAM-memory":"",
+                "RAM-memorySize":"",
+                "OS":"",
+                "hardware-memory":"",
+                "hardware-memorySize":""
+            },
+            "src":"some photo links",
+            "gallery":["",
+                        "",
+                        "", 
+                        ""],
+            "price":1000,
+            "full_text":"description",
+            "status":"sale/top/new"
+        },
+        {
+            "id":20,
+            "productType":"watches",
+            "title":"test_20",
+            "specifications":{
+                "size":"",
+                "material":"",
+                "processor":"",
+                "RAM-memory":"",
+                "RAM-memorySize":"",
+                "OS":"",
+                "hardware-memory":"",
+                "hardware-memorySize":""
+            },
+            "src":"some photo links",
+            "gallery":["",
+                        "",
+                        "", 
+                        ""],
+            "price":1000,
+            "full_text":"description",
+            "status":"sale/top/new"
         }
     ]
 }

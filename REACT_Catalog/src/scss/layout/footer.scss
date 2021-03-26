@@ -1,6 +1,6 @@
 .footer{
-    background-color:rgba($primary-color, .25);       
-    border-top: $border-size solid rgba($primary-color, .8);
+    background-color:$primary-color;       
+    border-top: $border-size solid rgba($primary-color, $opacity-80);
 
     &__inner{
         padding: $padding;        

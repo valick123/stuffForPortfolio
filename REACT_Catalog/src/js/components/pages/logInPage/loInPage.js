@@ -34,14 +34,14 @@ class LogInPage extends React.Component{
         return (
             <Container>
                 <Row>
-                    <Col md={{ size: 6, offset: 3 }}>
+                    <Col md={{ size: 4, offset: 4 }}>
                         <Card body outline color="primary">
                             <Form onSubmit={this.logIn}>
-                            <FormGroup>
+                            <FormGroup className="mb-2">
                                 <Label for="UserName">User name</Label>
                                 <Input type="username" name="username" id="UserName" placeholder="User name" />
                             </FormGroup>
-                            <FormGroup>
+                            <FormGroup className="mb-2">
                                 <Label for="Password">Password</Label>
                                 <Input type="password" name="password" id="Password" placeholder="Password" />
                             </FormGroup>

@@ -1,8 +1,7 @@
 import React from 'react';
-import {Row, Col, Container,Button,Nav, NavItem, NavLink } from 'reactstrap'
+import { Container } from 'reactstrap'
 import {Link,} from 'react-router-dom'
 import {connect} from 'react-redux'
-import LOGO from '../../../img/placeholder.com-logo.png';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {fas} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -24,36 +23,33 @@ class Header extends React.Component{
        
     }
     handleOpenMenu= () =>{
-        console.log(this.Menu)
         this.Menu.current.classList.add('menu-block-opened');
         document.body.style.overflow = "hidden"
     }
     handleCloseMenu= () =>{
-        console.log(this.Menu)
         this.Menu.current.classList.remove('menu-block-opened');
         document.body.style.overflow = "visible"
     }
     render(){
        
         return(
-            <header className="header" >
+            <header id={this.props.id} className="header" >
                 <Container >
                     <div className="header__inner">
-                        <div className="logo">
-                            <img src={LOGO} style={{
-                                width :"100%",
-                                maxWidth: 300
-                            }} />
+                        <div className="logo-block"> 
+                            <Link className="menu-item_link" to="/" >                           
+                                <FontAwesomeIcon className="logo-font" icon="font-awesome-logo-full" />
+                            </Link>    
                         </div>
                         
                         <button onClick={this.handleOpenMenu} className="menu-toggler" >
-                            <FontAwesomeIcon icon="bars"/>
+                            <FontAwesomeIcon size="lg" icon="bars"/>
                         </button>
                             <div className="menu-block" ref={this.Menu}>
                                 <div className="menu-header">
                                     
                                     <button onClick={this.handleCloseMenu} className="menu-toggler">
-                                        <FontAwesomeIcon icon="arrow-right" />
+                                        <FontAwesomeIcon size="lg" icon="arrow-right" />
                                     </button>
                                 </div>
                                 
@@ -83,10 +79,10 @@ class Header extends React.Component{
                                 <li className="menu-item" onClick={this.handleCloseMenu}>
                                     {this.props.isLoged
                                 ?
-                                    <button className="menu-item_link" color="link" onClick={this.logOut}>
+                                    <a href="#" className="menu-item_link" color="link" onClick={this.logOut}>
                                         <FontAwesomeIcon className="menu-item_ico" icon="sign-out-alt" fixedWidth />
                                         LogOut
-                                    </button>
+                                    </a>
                                 
                                 :
                                     <Link className="menu-item_link" to="/logIn">

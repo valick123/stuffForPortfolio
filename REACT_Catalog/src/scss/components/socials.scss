@@ -1,7 +1,17 @@
 .socials{
+    list-style-type: none;
     &-item{
+        transition:all $transition;
+        &:hover{
+            background-color: rgba(#fff, $opacity-30);
+
+        }
         &_link{
-            color:darken($primary-color,10%);
+            color:#fff;
+            &:hover{
+                color:#fff ;
+
+            }
 
         }
         &_ico{
