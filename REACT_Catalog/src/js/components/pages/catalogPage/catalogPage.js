@@ -16,31 +16,31 @@ export default class CatalogPage extends React.Component{
         return(
             <Container>
                 <Row>                        
-                    <Col md={4} lg={3} className="mb-2">
+                    <Col md={4} lg={3} className="mb-4">
                         <div className="catalog-card">
                             <FontAwesomeIcon size="2x" fixedWidth className="catalog-card-ico" icon="mobile-alt" />
                             <Link className="catalog-card-link" to='/catalog/phones' >phones</Link>
                         </div>   
                     </Col>        
-                    <Col md={4} lg={3} className="mb-2">
+                    <Col md={4} lg={3} className="mb-4">
                         <div className="catalog-card">
                             <FontAwesomeIcon size="2x" fixedWidth className="catalog-card-ico" icon="tablet-alt" />
                             <Link className="catalog-card-link" to='/catalog/tablets' >tablets</Link>
                         </div>
                     </Col>        
-                    <Col md={4} lg={3} className="mb-2">
+                    <Col md={4} lg={3} className="mb-4">
                         <div className="catalog-card">
                             <FontAwesomeIcon size="2x" fixedWidth className="catalog-card-ico" icon="headphones-alt" />
                             <Link className="catalog-card-link" to='/catalog/headphones' >headphones</Link>
                         </div>
                     </Col>        
-                    <Col md={4} lg={3} className="mb-2">
+                    <Col md={4} lg={3} className="mb-4">
                         <div className="catalog-card">
                             <FontAwesomeIcon size="2x" fixedWidth className="catalog-card-ico" icon="laptop" />
                             <Link className="catalog-card-link" to='/catalog/laptops' >laptops</Link>
                         </div>
                     </Col> 
-                    <Col md={4} lg={3} className="mb-2">
+                    <Col md={4} lg={3} className="mb-4">
                         <div className="catalog-card">
                             <FontAwesomeIcon size="2x" fixedWidth className="catalog-card-ico" icon={["far","clock"]} />
                             <Link className="catalog-card-link" to='/catalog/watches' >watches</Link>

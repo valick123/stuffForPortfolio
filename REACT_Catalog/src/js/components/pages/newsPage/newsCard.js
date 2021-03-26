@@ -8,12 +8,12 @@ export default class NewsCard extends React.Component{
     }
     render(){
         return(
-            <Card className="mb-2 news-card">
+            <Card className="mb-4 news-card">
                 <CardBody>
                     <CardTitle tag="h5">{`#${this.props.info.id} ${this.props.info.title}`}</CardTitle >
                
                 
-                    <CardText>
+                    <CardText >
                     {this.props.info.body}
                     </CardText>
                     <CardLink href={`mailto:${this.props.info.email}`}>{this.props.info.email}</CardLink>

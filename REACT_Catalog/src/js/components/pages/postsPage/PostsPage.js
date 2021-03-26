@@ -33,21 +33,24 @@ const PostsPage = props => {
     
     },[])
     return(
-        <Container>
+        <Container className="postsPage">
             <Row>
-                <Col md={12}>
                     {!isLoading
                         ?props.posts.map((item)=>{
                             return props.postsImgs.map((img)=>{
                                 if(item.id === img.id){
-                                     return <PostCard info={item} img={img} key={item.id} />
+                                     return (
+                                         <Col className="mb-4" md={6} lg={3} key={item.id} >
+                                            <PostCard info={item} img={img}  /> 
+                                         </Col>
+                                        
+                                     )
                                     }
                                 })
                            
                             }) 
                         :<Spinner type="grow" color="primary" />    
                     } 
-                </Col>
             </Row>
         </Container>
         

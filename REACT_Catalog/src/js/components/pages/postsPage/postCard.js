@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardHeader, CardBody, CardFooter, Button,CardTitle,CardText,CardLink } from 'reactstrap';
+import { Card, CardHeader, CardBody, CardFooter, Button,CardTitle,CardText,CardLink, CardImg } from 'reactstrap';
 import {Link} from 'react-router-dom'
 export default class PostCard extends React.Component{
     constructor(props){
@@ -7,11 +7,11 @@ export default class PostCard extends React.Component{
     }
     render(){
         return(
-            <Card className="mb-2 post-card">
+            <Card className="mb-4 post-card">
                 <CardBody>
                     <CardTitle tag="h5">{`#${this.props.info.id} ${this.props.info.name}`}</CardTitle >
                 
-                    <img src = {this.props.img.thumbnailUrl}/>
+                    <CardImg style={{width:"auto",maxWidth:"100%"}} src = {this.props.img.thumbnailUrl}/>
                     <CardText>
                     {this.props.info.body}
                     </CardText>

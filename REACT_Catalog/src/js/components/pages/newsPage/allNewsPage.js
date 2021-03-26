@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {connect} from "react-redux";
-import{Container,Row,Col, Spinner} from "reactstrap";
+import{Container, Row, Col, Spinner} from "reactstrap";
 import NewsCard from "./newsCard"
 
 const AllNewsPage = props => {
@@ -24,16 +24,19 @@ const AllNewsPage = props => {
         }
     },[])
     return (
-        <Container>
+        <Container className="allNewsPage">
             <Row>
-                <Col md={12}>
                         {!isloading           
                             ?props.news.map((item)=>{
-                                return <NewsCard info={item} key={item.id} />
+                                return(
+                                    <Col className="mb-4" md={6} lg={4} key={item.id}>
+                                        <NewsCard info={item}   />
+                                    </Col>
+                                    
+                                ) 
                             })
                             :<Spinner type="grow" color="primary" />
                         }
-                </Col>
             </Row>
         </Container>
     )
