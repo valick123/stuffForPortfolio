@@ -16,12 +16,17 @@ export default class PostCard extends React.Component{
                     {this.props.info.body}
                     </CardText>
                     <CardLink href={`mailto:${this.props.info.email}`}>{this.props.info.email}</CardLink>
-                </CardBody>
-                <CardBody>
-                <Link to={`/posts/${this.props.info.id}`}>
+                    <div style={{paddingTop:10}} >
+                    <Link to={`/posts/${this.props.info.id}`}>
                         <Button   color="primary" >Read more</Button>
                     </Link>
+                    </div>
                 </CardBody>
+                {/* <CardBody> */}
+                {/* <Link to={`/posts/${this.props.info.id}`}>
+                        <Button   color="primary" >Read more</Button>
+                    </Link> */}
+                {/* </CardBody> */}
             </Card>
         )
     }

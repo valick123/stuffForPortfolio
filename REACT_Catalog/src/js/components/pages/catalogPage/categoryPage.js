@@ -44,16 +44,20 @@ class CategoryPage extends React.Component{
         return(
             <Container>
                 <Row>
-                    <Col md={12} onClick={this.addToBascet}>
+                    
                         <h1>{this.props.match.params.category}</h1>
                         {
                             !this.state.isLoading
                             ?this.props.catalog[this.props.match.params.category].map((item)=>{
-                                return <ProductCard info={item} key={item.id} />
+                                return (
+                                    <Col key={item.id} className="mb-4" md={4} onClick={this.addToBascet}>
+                                        <ProductCard info={item}  />
+                                    </Col>
+                                    )
                             })
                             :<Spinner type="grow" color="primary" />
                         }
-                    </Col>
+                    
                 </Row>
             </Container>
         )

@@ -4,7 +4,7 @@ import { Card, CardBody, CardLink, CardText, CardTitle } from "reactstrap";
 
 export const CommentCard = props => {
     return(
-        <Card>
+        <Card className="mb-2">
             <CardBody>
                 <CardTitle>
                     {
