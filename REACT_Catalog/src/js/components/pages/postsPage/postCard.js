@@ -11,7 +11,7 @@ export default class PostCard extends React.Component{
                 <CardBody>
                     <CardTitle tag="h5">{`#${this.props.info.id} ${this.props.info.name}`}</CardTitle >
                 
-                    <CardImg style={{width:"auto",maxWidth:"100%"}} src = {this.props.img.thumbnailUrl}/>
+                    <CardImg  src = {this.props.img.thumbnailUrl}/>
                     <CardText>
                     {this.props.info.body}
                     </CardText>
@@ -22,11 +22,6 @@ export default class PostCard extends React.Component{
                     </Link>
                     </div>
                 </CardBody>
-                {/* <CardBody> */}
-                {/* <Link to={`/posts/${this.props.info.id}`}>
-                        <Button   color="primary" >Read more</Button>
-                    </Link> */}
-                {/* </CardBody> */}
             </Card>
         )
     }

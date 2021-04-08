@@ -1,8 +1,8 @@
 .btn{
+    
    &-scroller{
     position: fixed;
-    display: none;
-    bottom: 20px;
+    bottom: -100px;
     right: 20px;
     background-color: $primary-color;
     border:none;
@@ -12,11 +12,15 @@
     height: 40px;
     transition: all .2s;
     z-index: 2;
-    
-    &_visible{
-        display: block;
-        box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+    box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
 
+    &_visible{
+        bottom: 20px;
+        
     }
+   }
+   &-block{
+       display: flex;
+       justify-content: space-evenly;
    }
 }

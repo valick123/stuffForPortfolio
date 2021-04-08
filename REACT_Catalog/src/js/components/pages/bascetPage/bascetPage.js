@@ -30,13 +30,22 @@ import BascetProductCard from './bascetProductCard';
         return(
             <Container>
                 <Row>
-                    <Col md={12} onClick={this.deletefromBascet}>
-                        {this.props.bascetList.length
-                        ?this.props.bascetList.map((item,index)=>{
-                            return <BascetProductCard info = {item} key={index} />
-                        })
-                        :<p>Bascet is empty</p>}
-                    </Col>
+                   
+                        {
+                            this.props.bascetList.length
+                            ?this.props.bascetList.map((item,index)=>{
+                                return( 
+                                    <Col className="mb-4" md={4} onClick={this.deletefromBascet} key={index}>
+                                        <BascetProductCard info = {item}  />
+                                    </Col>
+                                    
+                                    )
+                            })
+                            :<Col md={{size:4,offset:4}}>
+                                <p style={{textAlign:"center"}} >Bascet is empty</p>
+                            </Col>
+                        }
+                    
                 </Row>
             </Container>
         )

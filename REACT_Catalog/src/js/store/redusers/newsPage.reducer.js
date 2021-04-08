@@ -8,7 +8,7 @@ export const newsPageReducer = (state = initialState, action) =>{
         case "GET_NEWS":{
             return{
                 ...state,
-                news:[...state.news, ...action.payload]
+                news:[...action.payload]
             }
         }
         case "GET_NEWS_INFO":{

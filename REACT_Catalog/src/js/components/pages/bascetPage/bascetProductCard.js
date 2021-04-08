@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardHeader, CardBody, CardFooter, Button, Badge, CardText } from 'reactstrap'
+import { Card, CardHeader, CardBody, CardFooter, Button, Badge, CardText, CardImg } from 'reactstrap'
 import {Link} from 'react-router-dom'
 
 export default class BascetProductCard extends React.Component{
@@ -8,8 +8,8 @@ export default class BascetProductCard extends React.Component{
     }
     render(){
         return(
-            <Card>
-                <CardHeader>
+            <Card  >  
+                <CardBody>
                         <Link to={`/catalog/${this.props.info.productType}/${this.props.info.title}`}>{this.props.info.title}</Link>
                         <Badge color={this.props.info.status=='new'
                                             ?"success"
@@ -19,16 +19,13 @@ export default class BascetProductCard extends React.Component{
                                             ?"primary":
                                             ""}>{this.props.info.status}
                                     </Badge>
-                </CardHeader>
-                <CardBody>
-                        <img src={this.props.info.src} />
+               
+                        <CardImg src={this.props.info.src} />
                         <CardText>{this.props.info.price}</CardText>
                         <CardText>{this.props.info.full_text}</CardText>
                         
+                    <Button color="danger" data-product-id = {this.props.info.id}>Delete</Button>
                 </CardBody>
-                <CardFooter>
-                    <Button color="danger" data-product-id = {this.props.info.id}>Delete from bascet</Button>
-                </CardFooter>
             </Card>
         )
     }

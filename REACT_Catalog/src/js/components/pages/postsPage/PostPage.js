@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Row, Col, Card, CardBody,  Spinner, Button, CardTitle, CardText, CardLink, CardImg, Collapse } from 'reactstrap'
+import { Container, Row, Col, Card, CardBody,  Spinner, Button, CardTitle, CardText, CardLink, CardImg, Collapse, ButtonGroup } from 'reactstrap'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom';
 import {CommentCard} from "./postCommentsCard";
@@ -72,12 +72,15 @@ class PostPage extends React.Component{
                                             this.props.postInfo.email 
                                             }
                                         </CardLink>
-                                    </CardBody> 
-                                    <CardBody>   
+                                    {/* </CardBody> 
+                                    <CardBody>    */}
+                                    <div className="btn-block">
                                         <Link to="/" >
                                             <Button color="primary" >Back</Button>
                                         </Link>
                                         <Button onClick={this.collapseToggle}>Comments</Button>
+                                    </div>
+                                        
                                     </CardBody>
                                     <Collapse isOpen={this.state.isOpen}>
                                         {

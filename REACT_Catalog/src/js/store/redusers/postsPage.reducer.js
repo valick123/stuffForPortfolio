@@ -10,13 +10,13 @@ export  const postsPageReducer = (state = initialState, action)=>{
         case "GET_POSTS":{
             return {
                 ...state,
-                posts:[...state.posts, ...action.payload]
+                posts:[ ...action.payload]
             }
         }
         case "GET_POSTS_IMGS":{
             return{
                 ...state,
-                postsImgs:[...state.postsImgs, ...action.payload]
+                postsImgs:[ ...action.payload]
             }
         }
         case 'GET_POST_INFO':{
